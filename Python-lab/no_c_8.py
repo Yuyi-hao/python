@@ -8,5 +8,5 @@ def sum_digit(n):
     if s<10:
         print(s)
     else:
-        sum_digit(s)
+        sum_digit(s)       
 sum_digit(n)

@@ -5,6 +5,7 @@ i=1
 
 while(i<num1+1):
     if((num1%i==0) and (num2%i==0)):
-        g=i
+        gcd=i
     i+=1
-print(g)
+
+print(gcd)

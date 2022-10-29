@@ -1,27 +1,26 @@
 
+from random import randint
 def rand(start,end,num):
     l=[]
     for i in range(num):
-        l.append(random.randint(start,end))
+        l.append(randint(start,end))
     return l
-a=1
-b=100
-c=20
-m=t=rand(a,b,c)
-print(t)
+
+a, b, c=1, 100, 20
+t=rand(a,b,c)  # [randint(start,end) for _ in range(c)] one liner
+print(*[i for i in t]) # will print without '[]'
 c1=0
 
 avg=sum(t)/c
-print("average: ",avg)
-print("largest: ",max(t))
-print("smallest: ",min(t))
+print(f"Average: {avg}")
+print(f"Largest: {max(t)}")
+print(f"Smallest: {min(t)}")
 
 t.sort()
-t.pop()
-print("2nd largest: ",max(t))
-print("2nd smallest: ",t[1])
+print(f"2nd largest: {t[-2]}") # second largest could be found with t[-1] after sorting
+print(f"2nd smallest: {t[1]}")
 
-for i in m:
+for i in t:
    if(i%2==0):
        c1=c1+1
-print("total even no: ",c1)
+print(f"Total even number: {c1}")
